@@ -291,6 +291,13 @@ class DatabaseOperations(BaseDatabaseOperations):
 
         return str(value)
 
+    def adapt_decimalfield_value(self, value):
+        """
+        Return the value unchanged. Decimal values are adapted via
+        register_adapter in base.py.
+        """
+        return value
+
     def get_db_converters(self, expression):
         converters = super().get_db_converters(expression)
         internal_type = expression.output_field.get_internal_type()

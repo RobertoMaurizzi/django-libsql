@@ -42,6 +42,9 @@ class DatabaseFeatures(BaseDatabaseFeatures):
     supports_json_field_contains = False
     supports_update_conflicts = Database.sqlite_version_info >= (3, 24, 0)
     supports_update_conflicts_with_target = supports_update_conflicts
+    supports_expression_defaults = False
+    supports_default_keyword_in_insert = True
+    supports_default_keyword_in_bulk_insert = True
     test_collations = {
         "ci": "nocase",
         "cs": "binary",

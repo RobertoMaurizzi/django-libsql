@@ -3,6 +3,12 @@
 This project integrates Turso/Libsql with Django, allowing you to use Libsql as a database backend for your Django
 applications.
 
+## Requirements
+
+- Django 5.2 or later
+- Python 3.10 or later
+- libsql-client
+
 ## Installation
 
 To install the package, use pip:
