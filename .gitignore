@@ -264,10 +264,49 @@ poetry.toml
 pyrightconfig.json
 
 # End of https://www.toptal.com/developers/gitignore/api/django,python
-db.sqlite3
 
+### Additional Django ###
+# Static files (collected by collectstatic)
+staticfiles/
+static/
+
+# Media files
+media/
+
+# Additional SQLite files
 *.sqlite3
+*.sqlite3-journal
+*.db
 
+### macOS ###
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+### Editor / IDE ###
+# VS Code
+.vscode/
+*.code-workspace
+
+# PyCharm / IntelliJ IDEA
 .idea/
-
 /.idea/
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+### Project Specific ###
+# JWT keys (if generated locally)
+scripts/jwt_private_key.pem
+scripts/jwt_public_key.pem
